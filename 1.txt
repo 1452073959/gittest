@@ -1,4 +1,4 @@
-、第一次初始化123456
+、第一次初始化1234567894564
 git init
 git add .
 git commit -m ‘first commit’
