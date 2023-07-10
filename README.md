@@ -1,4 +1,4 @@
-、第一次初始化
+、第一次初始化这是正常
 git init
 git add .
 git commit -m ‘first commit’
