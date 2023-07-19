@@ -3,6 +3,7 @@
     <baseCount></baseCount>
     <baseCount></baseCount>
     <baseCount></baseCount>
+    <HmButton></HmButton>
   </div>
 </template>
 

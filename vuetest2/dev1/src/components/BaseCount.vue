@@ -3,6 +3,7 @@
     <button @click="count--">-</button>
     <span>{{ count }}</span>
     <button @click="count++">+</button>
+	    <HmButton></HmButton>
   </div>
 </template>
 
