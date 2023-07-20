@@ -2,13 +2,13 @@
 	<div class="head">
 		<h1>这是测试使用的组件组件</h1>
 		<hr>
-		{{ name }} {{ title }} 
+		{{ name }} {{ title }}
 		<br>
 		{{ proptitle2 }}
-
-		<div v-html="msg"></div>
+		<div v-html="msg"  ref="testref"></div>
 		<input type="text" value="" v-model="text2" />输入框
 		<button @click="sendMessage">测试子传父按钮</button>
+		<button @click="sendsync">sync测试</button>
 		<h3>测试for循环</h3>
 		<ul>
 			<li v-for="(item, index) in booksList">
@@ -58,11 +58,20 @@
 		methods: {
 			sendMessage() {
 				console.log("开始发送");
-				this.$emit('emitmessage', this.text2);
+				this.$emit('emitmessage', this.text2 + this.title);
 				console.log("子传父结束");
 			},
 			del(id) {
 				this.booksList = this.booksList.filter(item => item.id !== id)
+			},
+			//sync更新父组件传过来的值
+			sendsync() {
+				// console.log("sync");
+				this.$emit('update:title', "新的值");
+				this.$nextTick(()=>{
+					console.log("异步更新$nextTickDOM,更新完成之后才会做");
+				})
+				
 			}
 		},
 		//计算属性
@@ -82,8 +91,43 @@
 		props: {
 			title: String,
 			proptitle2: String
-		}
+		},
+		// 1. 创建阶段（准备数据）
+		beforeCreate() {
+			console.log('beforeCreate 响应式数据准备好之前')
+		},
+		created() {
+			console.log('created 响应式数据准备好之后')
+			// this.数据名 = 请求回来的数据
+			// 可以开始发送初始化渲染的请求了
+		},
 
+		// 2. 挂载阶段（渲染模板）
+		beforeMount() {
+			
+		},
+		mounted() {
+console.log(this.$refs.testref);
+		// this.sendsync()
+			// 可以开始操作dom了
+		},
+
+		// 3. 更新阶段(修改数据 → 更新视图)
+		beforeUpdate() {
+
+		},
+		updated() {
+
+		},
+
+		// 4. 卸载阶段
+		beforeDestroy() {
+			console.log('beforeDestroy, 卸载前')
+			console.log('清除掉一些Vue以外的资源占用，定时器，延时器...')
+		},
+		destroyed() {
+			console.log('destroyed，卸载后')
+		}
 	};
 </script>
 
