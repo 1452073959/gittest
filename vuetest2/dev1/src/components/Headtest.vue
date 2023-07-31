@@ -6,7 +6,7 @@
 		<br>
 		{{ proptitle2 }}
 		<div v-html="msg"  ref="testref"></div>
-		<input type="text" value="" v-model="text2" />输入框
+		<input v-focus type="text" value="" v-model="text2"X/>输入框
 		<button @click="sendMessage">测试子传父按钮</button>
 		<button @click="sendsync">sync测试</button>
 		<h3>测试for循环</h3>
@@ -67,6 +67,7 @@
 			//sync更新父组件传过来的值
 			sendsync() {
 				// console.log("sync");
+				
 				this.$emit('update:title', "新的值");
 				this.$nextTick(()=>{
 					console.log("异步更新$nextTickDOM,更新完成之后才会做");
@@ -107,7 +108,7 @@
 			
 		},
 		mounted() {
-console.log(this.$refs.testref);
+// console.log(this.$refs.testref);
 		// this.sendsync()
 			// 可以开始操作dom了
 		},

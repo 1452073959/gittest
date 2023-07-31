@@ -7,6 +7,17 @@ Vue.config.productionTip = false
 // Vue.component(组件名，组件对象)
 Vue.component('HmButton', HmButton)
 
+//全局注册自定义指令
+Vue.directive('focus',{
+	inserted(el)
+	{
+		el.focus()
+		console.log('全局自定义指令测试');
+		console.log(el);
+	}
+	
+})
+
 
 new Vue({
   render: h => h(App),
