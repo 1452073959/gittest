@@ -9,7 +9,6 @@
 		<input v-focus type="text" value="" v-model="text2"X/>输入框
 		<button @click="sendMessage">测试子传父按钮</button>
 		<button @click="sendsync">sync测试</button>
-
 		<h3>测试for循环</h3>
 		<ul>
 			<li v-for="(item, index) in booksList">
@@ -18,12 +17,6 @@
 				<button @click="del(item.id)">删除</button>
 			</li>
 		</ul>
-		<!-- //测试插槽,标签内部后备内容 -->
-		<slot>插槽默认内容</slot>
-		<slot name="testsolt"></slot>
-		<slot name="testsolt2"></slot>
-		<!-- <slot>插槽默认内容</slot> -->
-
 	</div>
 
 
