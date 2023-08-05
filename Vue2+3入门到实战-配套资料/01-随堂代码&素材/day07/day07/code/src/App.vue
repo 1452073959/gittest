@@ -5,7 +5,7 @@
       - {{ title }}
       - {{ count }}
     </h1>
-    <input :value="count" @input="handleInput" type="text">
+    <input :value="count+'dasd'" @input="handleInput" type="text">
     <Son1></Son1>
     <hr>
     <Son2></Son2>
