@@ -1,0 +1,23 @@
+AAct是一款由俄罗斯网友Ratiborus制作的非常小巧实用的KMS激活工具，能自动设置密钥管理服务激活Windows、Office VL版本。支持手动安装及删除激活产品密钥、手动创建及删除续期计划任务，该程序无需.NET Framework框架，相比国外其它激活工具，体积小巧、单执行文件、绿色无残留，激活成功率不错。
+
+【可以激活】
+	Windows 10所有VL 版本
+	Windows 8/8.1 所有VL 版本
+	Windows 7 专业版、企业版
+	Windows Vista
+	Windows Server 2008/2008 R2、2012/2012 R2
+	Office 2010/2013/2016 VL 版本
+
+【使用建议】
+Network版集成了第三方KMS服务，需联网获取激活信息。 如果杀毒软件报毒，请添加到杀毒软件白名单或排除项。
+
+【静默参数】
+/win=act - 在隐藏模式下运行程序，激活 Windows 并退出程序。
+/ofs=act - 在隐藏模式下运行程序，激活 Office 并退出程序。
+/wingvlk - 在隐藏模式下运行程序，安装 Windows 密钥并退出程序。
+/ofsgvlk - 在隐藏模式下运行程序，安装 Office 密钥并退出程序。
+/taskwin - 创建 Windows 重新激活任务
+/taskofs - 创建 Office 重新激活任务
+/tap - TAP模式  -  
+/hook - Hook模式
+/auto - WinDivert, Hook and TAP自动模式 

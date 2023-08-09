@@ -3,6 +3,10 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 
+// 全部导入
+import Vant from 'vant'
+import 'vant/lib/index.css'
+Vue.use(Vant)
 Vue.config.productionTip = false
 
 new Vue({
