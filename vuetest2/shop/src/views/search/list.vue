@@ -62,7 +62,7 @@ export default {
       goodsName: this.querySearch,
       page: this.page
     })
-    this.proList = list
+    this.proList = list.data
   }
 }
 </script>
