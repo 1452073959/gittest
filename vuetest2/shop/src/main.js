@@ -2,6 +2,7 @@ import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
 import store from './store'
+import '@/styles/common.less'
 
 // 全部导入
 import Vant from 'vant'

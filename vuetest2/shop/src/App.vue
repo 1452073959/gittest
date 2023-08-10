@@ -5,7 +5,7 @@
       <router-link to="/about">About</router-link>
     </nav> -->
 
-    <van-button type="primary">主要按钮</van-button>
+    <!-- <van-button type="primary">主要按钮</van-button>
     <van-button type="info">信息按钮</van-button>
     <van-button type="default">默认按钮</van-button>
     <van-button type="warning">警告按钮</van-button>
@@ -13,7 +13,8 @@
     <van-radio-group v-model="radio">
   <van-radio name="1">单选框 1</van-radio>
   <van-radio name="2">单选框 2</van-radio>
-</van-radio-group>
+ </van-radio-group> -->
+
 <div class="box">
 
 </div>
@@ -49,6 +50,11 @@ export default {
   //       color: #42b983;
   //     }
   //   }
+  // }
+  // .box{
+  //   width: 300px;
+  //   height: 300px;
+  //   background-color: bisque;
   // }
 
 </style>
