@@ -86,7 +86,7 @@ const router = new VueRouter({
 const authUrls = ['/pay', '/myorder']
 
 router.beforeEach((to, from, next) => {
-  // console.log(to, from, next)
+  console.log(to, from, next)
   // 看 to.path 是否在 authUrls 中出现过
   if (!authUrls.includes(to.path)) {
     // 非权限页面，直接放行
