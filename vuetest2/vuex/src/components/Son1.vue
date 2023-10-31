@@ -25,12 +25,48 @@
     <hr>
     <!-- 测试访问模块中的getters - 原生 -->
     <div>{{ $store.getters['user/UpperCaseName'] }}</div>
+
+
+    {{ for2 }}
+    <ul>
+			<li v-for="item in booksList" :key="item.id">
+				<span>{{ item.name }}</span>
+				<span>{{ item.author }}</span>
+				<button @click="del(item.id)">删除</button>
+			</li>
+    </ul>
+
   </div>
 </template>
 
 <script>
 export default {
   name: 'Son1Com',
+  data(){
+    return{
+      booksList: [{
+						id: 1,
+						name: '《红楼梦》',
+						author: '曹雪芹'
+					},
+					{
+						id: 2,
+						name: '《西游记》',
+						author: '吴承恩'
+					},
+					{
+						id: 3,
+						name: '《水浒传》',
+						author: '施耐庵'
+					},
+					{
+						id: 4,
+						name: '《三国演义》',
+						author: '罗贯中'
+					}
+				]
+    }
+  },
   created () {
     console.log(this.$store.getters)
     console.log(this.$store.state.count)

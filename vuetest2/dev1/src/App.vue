@@ -54,12 +54,12 @@
 		},
 		mounted() {
 			console.log(this.$refs.testref);
-			var a="proptitle"
+			// var a="proptitle"
 			
-			handleMessage2(a) {
-				this.proptitle = "子传父内容:" + message
-			}
-			$proptitle
+			// handleMessage2(message) {
+			// 	this.proptitle = "子传父内容:" + message
+			// }
+			// $proptitle
 			// 可以开始操作dom了
 		},
 		//子传父的第二种方式

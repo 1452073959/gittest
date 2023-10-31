@@ -1,6 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$/springboot" />
+    <file type="web" url="file://$PROJECT_DIR$/web_app/boot" />
+  </component>
   <component name="MavenProjectsManager">
     <option name="originalFiles">
       <list>
@@ -8,6 +11,8 @@
         <option value="$PROJECT_DIR$/java_maven/pom.xml" />
         <option value="$PROJECT_DIR$/java_quick/pom.xml" />
         <option value="$PROJECT_DIR$/java_maven/boot2/pom.xml" />
+        <option value="$PROJECT_DIR$/springboot/pom.xml" />
+        <option value="$PROJECT_DIR$/demo-Java220924/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
