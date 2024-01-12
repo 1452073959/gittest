@@ -1,0 +1,21 @@
+
+server:
+  port: 2349
+
+#spring:
+#  config:
+#    activate:
+#      on-profile: dev1
+
+lesson: SpringBoot
+
+enterprise:
+  name: zc232c
+  age: 16
+  subject:
+  - java
+  - 前端
+spring:
+  datasource:
+    driver-class-name: com
+
