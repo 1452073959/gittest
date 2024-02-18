@@ -17,6 +17,28 @@
 		<java.version>1.8</java.version>
 	</properties>
 	<dependencies>
+<!--		<dependency>-->
+<!--&lt;!&ndash;			惠易付&ndash;&gt;-->
+<!--			<groupId>com.pay</groupId>-->
+<!--			<artifactId>hpay-brand-channel-sdk</artifactId>-->
+<!--			<version>1.0.4</version>-->
+<!--			<scope>system</scope>-->
+<!--			<systemPath>${project.basedir}/lib/hpay-brand-channel-sdk-1.0.4.jar</systemPath>-->
+<!--		</dependency>-->
+<!--		<dependency>-->
+<!--			<groupId>com.google.guava</groupId>-->
+<!--			<artifactId>guava</artifactId>-->
+<!--			<version>31.1-jre</version>-->
+<!--			&lt;!&ndash;-->
+<!--			    scope=system表示此依赖是来自外部jar，而不是maven仓库-->
+<!--			    注意：-->
+<!--			      只有当scope设置为system时，systemPath属性才会生效-->
+<!--			      systemPath是一个物理文件路径，来指定依赖的外部jar在物理磁盘的位置-->
+<!--			      ${project.basedir}代表项目根目录-->
+<!--			&ndash;&gt;-->
+<!--			<scope>system</scope>-->
+<!--			<systemPath>${project.basedir}/libs/guava-31.1-jre.jar</systemPath>-->
+<!--		</dependency>-->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
@@ -40,9 +62,8 @@
 		<dependency>
 			<groupId>cn.hutool</groupId>
 			<artifactId>hutool-all</artifactId>
-			<version>5.7.18</version>
+			<version>5.3.10</version>
 		</dependency>
-
 
 		<dependency>
 			<groupId>com.alibaba</groupId>
@@ -84,6 +105,7 @@
 			<artifactId>commons-httpclient</artifactId>
 			<version>3.1</version>
 		</dependency>
+
 	</dependencies>
 
 	<build>
@@ -93,6 +115,8 @@
 				<artifactId>spring-boot-maven-plugin</artifactId>
 				<configuration>
 					<image>
+						<!-- 在打包时将引用的外部jar引入到当前项目包中	-->
+						<includeSystemScope>true</includeSystemScope>
 						<builder>paketobuildpacks/builder-jammy-base:latest</builder>
 					</image>
 				</configuration>
